@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just a Hacker For Fun</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #2b0033;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #f7b733;
+        }
+        nav {
+            margin-bottom: 30px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        nav ul li {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            background: #4a004a;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+        nav ul li:hover {
+            background: #8f008f;
+            cursor: pointer;
+        }
+        .tab-content {
+            width: 80%;
+            max-width: 800px;
+            display: none;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+            transition: opacity 0.5s ease;
+        }
+        .tab-content.active {
+            display: block;
+            opacity: 1;
+        }
+        .tab-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .tab-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.9rem;
+        }
+        /* Smooth transitions */
+        .tab-content {
+            opacity: 0;
+        }
+        .tab-content.active {
+            opacity: 1;
+        }
+        /* Button Hover Effect */
+        nav ul li {
+            transition: background 0.4s ease-in-out, transform 0.3s;
+        }
+        nav ul li:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Just a Hacker For Fun</h1>
+    </header>
+    <nav>
+        <ul>
+            <li data-tab="home">Home</li>
+            <li data-tab="about">About Me</li>
+            <li data-tab="skills">Skills</li>
+            <li data-tab="contact">Contact</li>
+        </ul>
+    </nav>
+    
+    <div class="tab-content active" id="home">
+        <h2>Introduction</h2>
+        <p>Welcome to my site! I am a Penetration Tester and Bug Bounty Hunter specializing in web penetration testing and mobile application security. I'm passionate about learning, improving my skills, and tackling new challenges.</p>
+    </div>
+    <div class="tab-content" id="about">
+        <h2>About Me</h2>
+        <p>I am a cybersecurity enthusiast focused on ethical hacking and vulnerability assessments. Currently, I am expanding my knowledge in penetration testing, particularly in web applications and mobile security. Stay tuned as I continue to grow in this field. I currently reside in Qatar</p>
+    </div>
+    <div class="tab-content" id="skills">
+        <h2>Skills</h2>
+        <p>My key skills include web penetration testing, mobile app security, and understanding modern exploits. While I am still learning, my drive to improve and contribute to the security community is what motivates me every day.</p>
+    </div>
+    <div class="tab-content" id="contact">
+        <h2>Contact Me</h2>
+        <p>If you want to reach out, feel free to contact me:</p>
+        <p>Email: <a href="mailto:JustaHackerForFun@protonmail.com">JustaHackerForFun@protonmail.com</a></p>
+    </div>
+
+    <footer>
+        &copy; 2024 Just a Hacker For Fun
+    </footer>
+
+    <script>
+        const tabs = document.querySelectorAll('nav ul li');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = document.getElementById(tab.dataset.tab);
+
+                contents.forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                target.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
