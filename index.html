@@ -1,148 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just a Hacker For Fun</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            background: #2b0033;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            overflow-x: hidden;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        h1 {
-            font-size: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #f7b733;
-        }
-        nav {
-            margin-bottom: 30px;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-        nav ul li {
-            font-size: 1.2rem;
-            padding: 10px 20px;
-            background: #4a004a;
-            border-radius: 10px;
-            transition: background 0.3s ease;
-        }
-        nav ul li:hover {
-            background: #8f008f;
-            cursor: pointer;
-        }
-        .tab-content {
-            width: 80%;
-            max-width: 800px;
-            display: none;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-            transition: opacity 0.5s ease;
-        }
-        .tab-content.active {
-            display: block;
-            opacity: 1;
-        }
-        .tab-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-        .tab-content p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        footer {
-            position: absolute;
-            bottom: 20px;
-            font-size: 0.9rem;
-        }
-        /* Smooth transitions */
-        .tab-content {
-            opacity: 0;
-        }
-        .tab-content.active {
-            opacity: 1;
-        }
-        /* Button Hover Effect */
-        nav ul li {
-            transition: background 0.4s ease-in-out, transform 0.3s;
-        }
-        nav ul li:hover {
-            transform: translateY(-5px);
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Just a Hacker For Fun</h1>
-    </header>
-    <nav>
-        <ul>
-            <li data-tab="home">Home</li>
-            <li data-tab="about">About Me</li>
-            <li data-tab="skills">Skills</li>
-            <li data-tab="contact">Contact</li>
-        </ul>
-    </nav>
-    
-    <div class="tab-content active" id="home">
-        <h2>Introduction</h2>
-        <p>Welcome to my site! I am a Penetration Tester and Bug Bounty Hunter specializing in web penetration testing and mobile application security. I'm passionate about learning, improving my skills, and tackling new challenges.</p>
-    </div>
-    <div class="tab-content" id="about">
-        <h2>About Me</h2>
-        <p>I am a cybersecurity enthusiast focused on ethical hacking and vulnerability assessments. Currently, I am expanding my knowledge in penetration testing, particularly in web applications and mobile security. Stay tuned as I continue to grow in this field. I currently reside in Qatar</p>
-    </div>
-    <div class="tab-content" id="skills">
-        <h2>Skills</h2>
-        <p>My key skills include web penetration testing, mobile app security, and understanding modern exploits. While I am still learning, my drive to improve and contribute to the security community is what motivates me every day.</p>
-    </div>
-    <div class="tab-content" id="contact">
-        <h2>Contact Me</h2>
-        <p>If you want to reach out, feel free to contact me:</p>
-        <p>Email: <a href="mailto:JustaHackerForFun@protonmail.com">JustaHackerForFun@protonmail.com</a></p>
-    </div>
+	<head>
+		<meta charset="utf-8">
 
-    <footer>
-        &copy; 2024 Just a Hacker For Fun
-    </footer>
+		<title>Just a Hacker for Fun Portfolio</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+        <meta name="author" content="templatemo">
+        <!-- 
+        Hi!
+        -->
+        
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script>
-        const tabs = document.querySelectorAll('nav ul li');
-        const contents = document.querySelectorAll('.tab-content');
+		<!-- animate -->
+		<link rel="stylesheet" href="css/animate.min.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- font-awesome -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- google font -->
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
+		<!-- fullpage -->
+		<link rel="stylesheet" href="css/jquery.fullPage.css">
+		<!-- custom -->
+		<link rel="stylesheet" href="css/templatemo-style.css">
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                const target = document.getElementById(tab.dataset.tab);
+	</head>
+	<body>
 
-                contents.forEach(content => {
-                    content.classList.remove('active');
-                });
+	<div id="fullpage">
 
-                target.classList.add('active');
-            });
-        });
-    </script>
-</body>
+		<!-- start home -->
+		<div id="home" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-8 wow fadeIn" data-wow-delay="0.9s">
+						<h3>Simple and Elegant</h3>
+						<h1>Just a Hacker For Fun</h1>
+						<h2 class="rotate">Web Application Pentester, Bug Bounty Hunter, CTF Player</h2>
+						<p>I'm a certified Penetration Tester that likes to participate in competitions relating to CTFs and ethical hacking</p>
+						<a href="#work" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">Get started</a>
+					</div>
+					<div class="col-md-2"></div>
+				</div>
+			</div>
+		</div>
+		<!-- end home -->
+
+		<!-- start work -->
+		<div id="work" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 wow bounce">
+						<h2>WHAT I DO</h2>
+					</div>
+                </div>  
+                
+                <div class="row">
+					<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="media">
+							<div class="media-object media-left">
+								<i class="fa fa-laptop"></i>
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">Web Application Pentesting</h3>
+								<p>I love diving into Web Applications and exploring what vulnerabilities might arise from different features</p>
+							</div>
+						</div>
+					</div>
+                    
+					<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="media">
+							<div class="media-object media-left">
+								<i class="fa fa-link"></i>
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">Bug Bounty Hunter</h3>
+								<p>I love participating in Bug Bounty Programs and VDPs, it is a fun way for me to use my skills while making money on the side</p>
+							</div>
+						</div>
+					</div>
+                    
+					<div class="col-md-4 col-xs-11 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="media">
+							<div class="media-object media-left">
+								<i class="fa fa-paper-plane"></i>
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">CTF Player</h3>
+								<p>I love participating in CTFs as it is a fun way to enhance my skills and gain hands-on experience, I participated in a CTF by <a rel="nofollow" href="https://www.whitehatdesert.com/">White Hat Desert</a> and love to do online CTFs by <a rel="nofollow" href="https://picoctf.org/">picoCTF</a></p>
+							</div>
+						</div>
+					</div>
+                    
+				</div>
+			</div>
+		</div>
+		<!-- end work -->
+
+		<!-- start about -->
+		<div id="about" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-xs-11 wow fadeInLeft" data-wow-delay="0.9s">
+						<h2>About Me</h2>
+						<h4>My CyberSecurity Journey</h4>
+						<p>It started off as just interest, I was around 10 years old, I was always left in awe when hearing about stories of others hacking into companies and banks, and then I decided I also wanted to be able to hack into things(ethically ofcourse), and then at the age of 13 I took my interest and turned it into a passion. I started learning more and more about cybersecurity and slowly started shifting towards CTFs, Bug Bounties, and Penetration testing. At the age of 14 was the first time I found a session hijacking/fixation vulnerability and ever since then I've found countless vulnerabilities such as total account takeover, XSS, IDORs etc. Then at the age of 15 I decided to participate in a CyberSecurity BootCamp by <a rel="nofollow" href="https://ncsa.gov.qa/en/">NCSA</a> and placed first in all of their competitions. I went on to participate in a CTF hosted by <a rel="nofollow" href="https://www.whitehatdesert.com/">White Hat Desert</a> and was able to qualify as a Finalist.          
+
+If you wish to see my certification please contact me through Whatsapp/Email</p>
+					</div>
+					<div class="col-md-6 col-xs-11 wow fadeInRight" data-wow-delay="0.9s">
+						<span class="text-top">Web Exploitation <small>100%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+							</div>
+						<span>Bug Bounty <small>90%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+							</div>
+						<span>CTFs <small>80%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+							</div>
+						<span>Fun <small>100%</small></span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end about -->
+
+		<!-- start portfolio -->
+		<div id="portfolio" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="wow bounce">PORTFOLIO</h2>
+				</div>
+				<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+					<div class="portfolio-thumb">
+						<img src="images/portfolio-img1.jpg" class="img-responsive" alt="portfolio img">
+							<div class="portfolio-overlay">
+								<h4>:)</h4>
+								<h5>By: <a rel="nofollow" href="https://ncsa.gov.qa/en/">NCSA</a></h5>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+					<div class="portfolio-thumb">
+						<img src="images/portfolio-img2.jpg" class="img-responsive" alt="portfolio img">
+							<div class="portfolio-overlay">
+								<h4>Prizes</h4>
+								<h5></h5>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+					<div class="portfolio-thumb">
+						<img src="images/portfolio-img3.jpg" class="img-responsive" alt="portfolio img">
+							<div class="portfolio-overlay">
+								<h4>CS Certificate</h4>
+								<h5>By: <a rel="nofollow" href="https://infocusqa.com/">Infocus Computer Training Centre</a></h5>
+</h5>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+					<div class="portfolio-thumb">
+						<img src="images/portfolio-img4.jpg" class="img-responsive" alt="portfolio img">
+							<div class="portfolio-overlay">
+								<h4>Best Hacker Certificate</h4>
+								<h5>By: <a rel="nofollow" href="https://ncsa.gov.qa/en/">NCSA</a></h5>
+</h5>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
+					<div class="portfolio-thumb">
+						<img src="images/portfolio-img5.jpg" class="img-responsive" alt="portfolio img">
+							<div class="portfolio-overlay">
+								<h4>CTF Finalist</h4>
+								<h5>By: <a rel="nofollow" href="https://www.whitehatdesert.com/">White Hat Desert</a></h5>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end portfolio -->
+
+		<!-- start contact -->
+		<div id="contact" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-lg-offset-1 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+						<address>
+							<p class="contact-title">CONTACT ME</p>
+							<p><i class="fa fa-phone"></i> +97430487827</p>
+							<p><i class="fa fa-envelope-o"></i> MalikMutasimElzaki@gmail.com</p>
+							<p><i class="fa fa-map-marker"></i> Doha, Qatar</p>
+						</address>
+					</div>
+					<div class="col-lg-6 col-md-6 col-xs-10 wow fadeInUp" data-wow-delay="0.6s">
+						
+					</div>
+					<div class="col-md-1 col-sm-1"></div>
+				</div>
+			</div>
+		</div>
+		<!-- end contact -->
+
+		<!-- start footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 wow fadeIn" data-wow-delay="0.9s">
+						<p>Copyright &copy; 2024 Portfolio 
+                        
+                        . </p>
+						<hr>
+						<ul class="social-icon">
+							<li><a href="https://instagram.com/notroka" class="fa fa-instagram"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- end footer -->
+
+	</div>
+
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		<!-- bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- fullpage -->
+		<script src="js/jquery.fullPage.js"></script>
+		<!-- smoothScroll -->
+		<script src="js/smoothscroll.js"></script>
+		<!-- wow -->
+		<script src="js/wow.min.js"></script>
+		<!-- text rotater -->
+		<script src="js/jquery.simple-text-rotator.js"></script>
+		<!-- custom -->
+		<script src="js/custom.js"></script>
+
+	</body>
 </html>
